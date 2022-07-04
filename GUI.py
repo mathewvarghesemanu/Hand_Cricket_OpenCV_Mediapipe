@@ -11,8 +11,10 @@ def draw_GUI(image1, image2,scores,curr_counter,computer_logic_output,hand_count
     #printing count from computer logic
     cv2.putText(image2, " "+str(computer_logic_output), (image2.shape[0]//2, image2.shape[1]*3//5), cv2.FONT_HERSHEY_SIMPLEX, 4, (255, 255, 0), 25)
     
+    #printing out
     if scores.batsman_state=="Out" and not scores.is_game_over():
       cv2.putText(image2, str("Out"), (image2.shape[0]*2//5, image2.shape[1]*2//5), cv2.FONT_HERSHEY_SIMPLEX, 4, (255, 78, 54), 25)
+    #printing count
     elif not scores.is_game_over():
       #printing count down  value
       if curr_counter=="Show":

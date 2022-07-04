@@ -40,12 +40,12 @@ class Score:
         return self.game_over
     
     def is_game_over(self):
-        if self.wickets>=1:
+        if self.wickets>=5:
             self.set_game_over()
         return self.game_over
 
     def set_batsman_state(self):
-        self.batsman_state="out"
+        self.batsman_state="Out"
         return self.batsman_state
     
     def reset_batsman_state(self):
